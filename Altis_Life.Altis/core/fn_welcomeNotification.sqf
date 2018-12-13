@@ -25,17 +25,15 @@ _textSpoiler = _display displayCtrl 1101;
 _text2 = _display displayCtrl 1102;
 
 _message = "";
-_message = _message + "<t align='center' size='8' shadow='0'><img image='textures\armalife.jpg' /></t><br /><br />";
-_message = _message + "SERVER INFORMATION :  <br /><br />";
-
-_message = _message + "COMPULSORY  [TEAMSPEAK] : 156.38.198.74  <br /><br />";
-
-_message = _message + "[DISCORD] : <a href='https://discord.gg/5UpmpyN' color='#56BDD6'>[A3C]SANDF Discord Invite</a>  <br />";
-_message = _message + "[UPDATES] : Please be patient this is still work in progress - Updates|Changes are made daily <br /><br />";
-//_message = _message + "[MODS] Coming Soon : Advanced Combat Environment 3 (ACE3) <br /><br />";
-//_message = _message + "[MAP] : Malden 2035 is being considered  <br /><br />";
-_message = _message + "[WHITELIST] SAPS | ER24 <br /><br />";
-
+_message = _message + "<t align='center' size='8' shadow='0'>AsYetUntitled</t><br /><br />";
+_message = _message + "AsYetUntitled, formerly Altis Life RPG and ARMARPGLIFE is a roleplay framework for ArmA III originally made by TAW_Tonic.<br /><br />";
+_message = _message + "Useful links for server owners:<br /><br />";
+_message = _message + "<a color='#00DFFF'>•</a> Github: <a href='https://github.com/AsYetUntitled/Framework' color='#56BDD6'> https://github.com/AsYetUntitled/Framework</a><br />";
+_message = _message + "<a color='#00DFFF'>•</a> Wiki: <a href='https://github.com/AsYetUntitled/Framework/wiki' color='#56BDD6'> https://github.com/AsYetUntitled/Framework/wiki</a><br />";
+_message = _message + "<a color='#00DFFF'>•</a> Releases (Stable Builds): <a href='https://github.com/AsYetUntitled/Framework/releases' color='#56BDD6'> https://github.com/AsYetUntitled/Framework/releases</a><br />";
+_message = _message + "<a color='#00DFFF'>•</a> Discord: <a href='https://discord.gg/ajGUDSH' color='#56BDD6'> https://discord.gg/ajGUDSH</a><br /><br />";
+_message = _message + "Thanks for joining and enjoy your stay, <a color='#B000FF'>YourServerName</a> Staff Team.<br />";
+_message = _message + "You can edit the text displayed in this box by modifying Altis_Life.Altis/core/fn_welcomeNotification.sqf";
 
 //Fill only the first text
 _text1 ctrlSetStructuredText (parseText _message);
