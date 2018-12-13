@@ -201,7 +201,45 @@ class LifeCfgVehicles {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
-        textures[] = {};
+        textures[] = {
+
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },
+
+
+        };
     };  
 
         class Yamaha_xmax {

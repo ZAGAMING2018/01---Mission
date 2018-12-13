@@ -41,11 +41,19 @@ class Life_Settings {
     noatm_timer = 10; //Time in minutes that players cannot deposit money after selling stolen gold.
     minimum_cops = 5; //Minimum cops required online to rob the Federal Reserve
 
+    /*Death settings*/
+    drop_weapons_onDeath = false; //Set true to enable weapon dropping on death. False (default) will delete player weapons on death, allowing them to be revived with them instead
+
     /* Basic System Configurations */
     donor_level = false; //Enable the donor level set in database (var = life_donorlevel; levels = 0,1,2,3,4,5). ATTENTION! Before enabling, read: https://www.bistudio.com/community/game-content-usage-rules & https://www.bistudio.com/monetization
     enable_fatigue = true; //Set to false to disable the ARMA 3 fatigue system.
-    total_maxWeight = 18; //Static variable for the maximum weight allowed without having a backpack
-    respawn_timer = 180; //How many seconds a player should wait, before being able to respawn. Minimum 5 seconds.
+    total_maxWeight = 24; //Static variable for the maximum weight allowed without having a backpack
+    respawn_timer = 30; //How many seconds a player should wait, before being able to respawn. Minimum 5 seconds.
+
+    /* Channel 7 News Station Configurations */
+    news_broadcast_cost = 150000; //Cost for a player to send a news station broadcast.
+    news_broadcast_cooldown = 20; //Time in minutes that is required between news station broadcasts. (Default = 20 minutes)
+    news_broadcast_header_length = 60; //Number of characters that a header can consist of. Anything over this may clip. This depends on the font size and various other factors. Adjust with caution.
 
     /* Clothing System Configurations */
     civ_skins = false; //Enable or disable civilian skins. Before enabling, you must add all the SEVEN files to textures folder. (It must be named as: civilian_uniform_1.jpg, civilian_uniform_2.jpg...civilian_uniform_6.jpg, civilian_uniform_7.jpg)
