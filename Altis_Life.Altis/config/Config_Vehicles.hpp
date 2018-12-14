@@ -117,7 +117,10 @@ class CarShops {
             { "C_Offroad_01_F", "" },
             { "I_Truck_02_medical_F", "" },
             { "O_Truck_03_medical_F", "" },
-            { "B_Truck_01_medical_F", "" }
+            { "B_Truck_01_medical_F", "" },
+            { "ESM_206", "" },
+            { "EMS_raptor", "" },
+            { "ES_Ambulance"", "" }         
         };
     };
 
@@ -219,12 +222,30 @@ class LifeCfgVehicles {
     };
     
     
+
+   class ESM_206 {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };       
+
+   class EMS_raptor {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };       
+
+   class ES_Ambulance {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };           
     
     
-    
-    
-    
-   class SAPS_Transport_Van {
+class SAPS_Transport_Van {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
@@ -304,11 +325,6 @@ class LifeCfgVehicles {
         textures[] = {};
     };          
 
-    
-    
-    
-    
-  
     class Golf_1 {
         vItemSpace = 30;
         conditions = "";
