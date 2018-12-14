@@ -1,19 +1,14 @@
 /*
-*    FORMAT:
-*        STRING (Conditions) - Must return boolean :
-*            String can contain any amount of conditions, aslong as the entire
-*            string returns a boolean. This allows you to check any levels, licenses etc,
-*            in any combination. For example:
-*                "call life_coplevel && license_civ_someLicense"
-*            This will also let you call any other function.
+*    Format:
+*        level: ARRAY (This is for limiting items to certain things)
+*            0: Variable to read from
+*            1: Variable Value Type (SCALAR / BOOL / EQUAL)
+*            2: What to compare to (-1 = Check Disabled)
+*            3: Custom exit message (Optional)
 *
+*    items: { Classname, Itemname, BuyPrice, SellPrice }
 *
-*    ARRAY FORMAT:
-*        0: STRING (Classname): Item Classname
-*        1: STRING (Nickname): Nickname that will appear purely in the shop dialog
-*        2: SCALAR (Buy price)
-*        3: SCALAR (Sell price): To disable selling, this should be -1
-*        4: STRING (Conditions): Same as above conditions string
+*    Itemname only needs to be filled if you want to rename the original object name.
 *
 *    Weapon classnames can be found here: https://community.bistudio.com/wiki/Arma_3_CfgWeapons_Weapons
 *    Item classnames can be found here: https://community.bistudio.com/wiki/Arma_3_CfgWeapons_Items
@@ -22,83 +17,106 @@
 class WeaponShops {
     //Armory Shops
     class gun {
-        name = "Billy Joe's Firearms";
+        name = "MG Firearms";
         side = "civ";
-        conditions = "license_civ_gun";
+        license = "gun";
+        level[] = { "", "", -1, "" };
         items[] = {
-            { "hgun_Rook40_F", "", 6500, 3250, "" },
-            { "hgun_Pistol_01_F", "", 7000, 3500, "" }, //Apex DLC
-            { "hgun_Pistol_heavy_02_F", "", 9850, 4925, "" },
-            { "hgun_ACPC2_F", "", 11500, 5750, "" },
-            { "SMG_05_F", "", 18000, 9000, "" }, //Apex DLC
-            { "hgun_PDW2000_F", "", 20000, 10000, "" }
+            { "hgun_Pistol_heavy_02_F", "", 2500, 0 },
+            { "hgun_Pistol_01_F", "", 4000, 0 },
+            { "hgun_ACPC2_F", "", 6000, 0 },
+            { "hgun_Pistol_heavy_01_F", "", 8000, 0 },
+            { "CSW_M500", "", 10000, 0 }
         };
         mags[] = {
-            { "16Rnd_9x21_Mag", "", 125, 60, "" },
-            { "6Rnd_45ACP_Cylinder", "", 150, 75, "" },
-            { "9Rnd_45ACP_Mag", "", 200, 100, "" },
-            { "30Rnd_9x21_Mag", "", 250, 125, "" },
-            { "30Rnd_9x21_Mag_SMG_02", "", 250, 125, "" }, //Apex DLC
-            { "10Rnd_9x21_Mag", "", 250, 125, "" } //Apex DLC
+            { "6Rnd_45ACP_Cylinder", "", 90 },
+            { "10Rnd_9x21_Mag", "", 110 },
+            { "9Rnd_45ACP_Mag", "", 130 },
+            { "11Rnd_45ACP_Mag", "", 150 },
+            { "CSW_5Rnd_127x41_Magnum", "", 250 }
+
         };
         accs[] = {
-            { "acc_flashlight_pistol", "", 1000, 500, "" },//Pistol Flashlight
-            { "optic_ACO_grn_smg", "", 2500, 1250, "" }
+            { "optic_Yorris", "", 1050 },
+            { "optic_MRD", "", 1200 }
         };
     };
 
     class rebel {
         name = "Mohammed's Jihadi Shop";
         side = "civ";
-        conditions = "license_civ_rebel";
+        license = "rebel";
+        level[] = { "", "", -1, "" };
         items[] = {
-            { "arifle_TRG20_F", "", 25000, 12500, "" },
-            { "arifle_Katiba_F", "", 30000, 15000, "" },
-            { "srifle_DMR_01_F", "", 50000, 25000, "" },
-            { "arifle_SDAR_F", "", 20000, 10000, "" },
-            { "arifle_AK12_F", "", 22000, 11000, "" }, //Apex DLC
-            { "arifle_AKS_F", "", 22000, 11000, "" }, //Apex DLC
-            { "arifle_AKM_F", "", 22000, 11000, "" }, //Apex DLC
-            { "arifle_ARX_blk_F", "", 22000, 11000, "" }, //Apex DLC
-            { "arifle_SPAR_01_blk_F", "", 33000, 16500, "" }, //Apex DLC
-            { "arifle_CTAR_blk_F", "", 30000, 15000, "" } //Apex DLC
+            { "immersion_cigs_cigar0", "Cuban Cigar", 200, 0 },
+            { "murshun_cigs_lighter", "Zipo", 75, 0 },
+            { "hgun_PDW2000_F", "PDW 9mm", 13500, 0 },
+            { "SMG_05_F", "Protector 9mm", 17500, 0 },
+            { "CSW_Desert_Eagle", "Desert Eagle", 18500, 0 }, //---------------------  <<-----------
+            { "arifle_TRG20_F", "TGR-20", 45000, 0 },
+            { "srifle_DMR_01_F", "Rahim 7.62", 55000, 0 },
+            { "arifle_AKS_F", "AKS-74U 7.62 ", 75000, 0 },
+            { "arifle_AKM_F", "AKM 7.62 ", 95000, 0 },
+            { "srifle_DMR_06_olive_F", "MK14 DMR 7.62", 105000, 0 },
+            { "arifle_ARX_blk_F", "Type 115 6.5mm ", 195000, 0 },
+            { "STI_MK13", "MK13 GL", 25000, 0 }
+
         };
         mags[] = {
-            { "30Rnd_556x45_Stanag", "", 300, 150, "" },
-            { "30Rnd_762x39_Mag_F", "", 300, 150, "" }, //Apex DLC
-            { "30Rnd_545x39_Mag_F", "", 300, 150, "" }, //Apex DLC
-            { "30Rnd_65x39_caseless_green", "", 275, 140, "" },
-            { "10Rnd_762x54_Mag", "", 500, 250, "" },
-            { "20Rnd_556x45_UW_mag", "", 125, 60, "" },
-            { "30Rnd_580x42_Mag_F", "", 125, 60, "" } //Apex DLC
+            { "30Rnd_9x21_Mag", "30rnd 9mm", 750 },
+            { "30Rnd_9x21_Mag_SMG_02", "30rnd 9mm", 900 },
+            { "CSW_7Rnd_127x33_AE", "7rnd 50cal", 1500 },
+            { "30Rnd_556x45_Stanag", "30rnd 5.56", 1000 },
+            { "10Rnd_762x54_Mag", "10rnd 7.62", 950 },
+            { "30Rnd_762x39_Mag_F", "30rnd 7.62", 2050 },
+            { "30Rnd_545x39_Mag_F", "30rnd 5.45", 1650 },
+            { "20Rnd_762x51_Mag", "20rnd 7.62", 1500 },
+            { "30Rnd_65x39_caseless_green_mag_Tracer", "30rnd 6.5", 1950 },
+            { "10Rnd_50BW_Mag_F", "10rnd 50BW", 3500 },
+            { "UGL_FlareRed_F", "Flare Red", 125 },
+            { "1Rnd_SmokeRed_Grenade_shell", "Smoke GL rnd red", 250 }
         };
         accs[] = {
-            { "optic_ACO_grn", "", 3500, 1750, "" },
-            { "optic_Holosight", "", 3600, 1800, "" },
-            { "optic_Hamr", "", 7500, 3750, "" },
-            { "acc_flashlight", "", 1000, 500, "" }
+            { "optic_ACO_grn", "ACO Grn", 1900 },
+            { "optic_Aco", "Aco Red", 1900 },
+            { "optic_Holosight", "Holo", 2015 },
+            { "optic_Holosight_blk_F", "Holo Blk ", 2250 },
+            { "optic_MRCO", "MRCO", 3500 },
+            { "optic_Arco", "ARCO", 7500 },
+            { "optic_Arco_blk_F", "ARCO ", 7500 },
+            { "optic_Hamr", "RCO", 7500 },
+            { "optic_ERCO_blk_F", "ERCO ", 9500 },
+            { "optic_DMS", "DMS", 15500 },
+            { "KA_ANPEQ15_Black_IR", "Laser Sight Blk", 750 },
+            { "optic_Hamr_khk_F", "Laser Sight Khk", 750 },
+            { "acc_flashlight", "Gun Light", 80 },
+            { "O_NVGoggles_ghex_F", "NVG Hex ", 3500 },
+            { "O_NVGoggles_urb_F", "NVG Urb ", 3500 }
         };
     };
 
     class gang {
         name = "Hideout Armament";
         side = "civ";
-        conditions = "";
+        license = "";
+        level[] = { "", "", -1, "" };
         items[] = {
-            { "hgun_Rook40_F", "", 1500, 750, "" },
-            { "hgun_Pistol_heavy_02_F", "", 2500, 1250, "" },
-            { "hgun_ACPC2_F", "", 4500, 2250, "" },
-            { "hgun_PDW2000_F", "", 9500, 4750, "" }
+            { "hgun_Pistol_heavy_02_F", "Zubr ACP", 5000, 0 },
+            { "hgun_Pistol_01_F", "PM ", 8000, 0 },
+            { "hgun_ACPC2_F", "1911 ACP", 12000, 2500 },
+            { "hgun_Pistol_heavy_01_F", "4-Five ACP", 16000, 0 },
+            { "CSW_M500", "Smith Western Magnum", 21000, 0 }
         };
         mags[] = {
-            { "16Rnd_9x21_Mag", "", 125, 60, "" },
-            { "6Rnd_45ACP_Cylinder", "", 150, 75, "" },
-            { "9Rnd_45ACP_Mag", "", 200, 100, "" },
-            { "30Rnd_9x21_Mag", "", 250, 125, "" }
+            { "6Rnd_45ACP_Cylinder", "6rnd 45ACP Cylinder", 200 },
+            { "10Rnd_9x21_Mag", "10rnd 9mm", 300 },
+            { "9Rnd_45ACP_Mag", "9rnd 45ACP", 350 },
+            { "11Rnd_45ACP_Mag", "11rnd 45ACP", 370 },
+            { "CSW_5Rnd_127x41_Magnum", "11rnd 45ACP", 500 }
         };
         accs[] = {
-            { "acc_flashlight_pistol", "", 500, 250, "" },//Pistol Flashlight
-            { "optic_ACO_grn_smg", "", 950, 475, "" }
+            { "optic_Yorris", "Yoris", 1050 },
+            { "optic_MRD", "MRD", 1200 }
         };
     };
 
@@ -106,19 +124,25 @@ class WeaponShops {
     class genstore {
         name = "Altis General Store";
         side = "civ";
-        conditions = "";
+        license = "";
+        level[] = { "", "", -1, "" };
         items[] = {
-            { "Binocular", "", 150, 75, "" },
-            { "ItemGPS", "", 100, 50, "" },
-            { "ItemMap", "", 50, 25, "" },
-            { "ItemCompass", "", 50, 25, "" },
-            { "ItemWatch", "", 50, 25, "" },
-            { "FirstAidKit", "", 150, 75, "" },
-            { "NVGoggles", "", 2000, 1000, "" },
-            { "Chemlight_red", "", 300, 150, "" },
-            { "Chemlight_yellow", "", 300, 150, "" },
-            { "Chemlight_green", "", 300, 150, "" },
-            { "Chemlight_blue", "", 300, 150, "" }
+            { "Binocular", "Binocular", 150, 0 },
+            { "ItemGPS", "GPS", 100, 0 },
+            { "ItemMap", "Map", 50, 0 },
+            { "ItemCompass", "compass", 50, 0 },
+            { "ItemWatch", "Watch", 50, 0 },
+            { "murshun_cigs_cig0", "Endtjie", 75, 0 },
+            { "murshun_cigs_cigpack", "Cig pack", 75, 0 },
+            { "murshun_cigs_matches", "Lion Matches", 10, 0 },
+            { "Chemlight_yellow", "Chemlight Yellow", 25, 0 },
+            { "Chemlight_green", "Chemlight Green", 25, 0 },
+            { "NVGoggles", "NVG Brn", 2000, 980 },
+            { "NVGoggles_OPFOR", "NVG Blk", 2000, 980 },
+            { "NVGoggles_INDEP", "NVG Grn", 2000, 980 },
+            { "NVGoggles_tna_F", "NVG Tpc", 2000, 980 },
+            { "ACRE_PRC152", "Short Radio 5KM", 500, 50 },
+            { "ACRE_PRC117F", "Long Radio 20KM", 1500, 50 }
         };
         mags[] = {};
         accs[] = {};
@@ -127,174 +151,216 @@ class WeaponShops {
     class f_station_store {
         name = "Altis Fuel Station Store";
         side = "";
-        conditions = "";
+        license = "";
+        level[] = { "", "", -1, "" };
         items[] = {
-            { "Binocular", "", 750, 75, "" },
-            { "ItemGPS", "", 500, 50, "" },
-            { "ItemMap", "", 250, 25, "" },
-            { "ItemCompass", "", 250, 25, "" },
-            { "ItemWatch", "", 250, 25, "" },
-            { "FirstAidKit", "", 750, 75, "" },
-            { "NVGoggles", "", 10000, 1000, "" },
-            { "Chemlight_red", "", 1500, 150, "" },
-            { "Chemlight_yellow", "", 1500, 150, "" },
-            { "Chemlight_green", "", 1500, 150, "" },
-            { "Chemlight_blue", "", 1500, 150, "" }
+            { "Binocular", "", 750, 0 },
+            { "ItemGPS", "", 500, 0 },
+            { "ItemMap", "", 250, 0 },
+            { "ItemCompass", "", 250, 0 },
+            { "ItemWatch", "", 250, 0 },
+            { "FirstAidKit", "", 750, 0 },
+            { "NVGoggles", "", 10000, 0 },
+            { "ACRE_PRC152", "Short Radio 5KM", 500, 0 },
+            { "ACRE_PRC117F", "Long Radio 20KM", 1500, 0 }
         };
         mags[] = {};
         accs[] = {};
     };
 
     //Cop Shops
-    class cop_basic {
-        name = "Altis Cop Shop";
+    class cop_cadet {                               // SAPS Cadet
+        name = "Cop Shop";
         side = "cop";
-        conditions = "";
+        license = "";
+        level[] = { "", "", -1, "" };
         items[] = {
-            
-            
-            //================================
-            //============ ALL RANKS =========
-            //================================
-            
-            { "Binocular", "", 150, 75, "" },
-            { "ItemGPS", "", 100, 50, "" },
-            { "FirstAidKit", "", 150, 75, "" },
-            { "NVGoggles", "", 2000, 1000, "" },
-            { "SmokeShell", "", 2000, 1000, "" },
-            { "HandGrenade_Stone", $STR_W_items_Flashbang, 1700, 850, "" },
-            { "hgun_P07_snds_F", $STR_W_items_StunPistol, 2000, 1000, "" },
-            { "arifle_SDAR_F", $STR_W_items_TaserRifle, 20000, 10000, "" },
-    
-            
-            //================================
-            //============ CADET  ============
-            //================================
+            { "hgun_P07_snds_F", "Stun Pistol", 500, 0 },
+            { "HandGrenade_Stone", "Flashbang", 500, 0 },
+            { "Binocular", "", 50, 0 },
+            { "ItemGPS", "", 75, 0 },
+            { "FirstAidKit", "", 50, 0 },
+            { "NVGoggles", "", 1500, 980 },
+            { "ACRE_PRC152", "Short Radio 5KM", 250, 0 },
+            { "ACRE_PRC117F", "Long Radio 20KM", 500, 0 },
+            //{ "SatchelCharge_Remote_Mag", "Explosives", 500, 0 },
+            { "SMG_02_F", "Sting PDW 9mm", 1500, 0 }        
+        };
+        mags[] = {
+            { "16Rnd_9x21_Mag", "", 25 },
+            { "30Rnd_9x21_Mag", "", 130, 65, "" },
+            { "30Rnd_9x21_Red_Mag", "", 200, 100, "" },
+            { "30Rnd_9x21_Mag_SMG_02", "", 200, 100, "" }
+        };
+        accs[] = {
+            { "muzzle_snds_L", "Suppressor 9mm", 650, 325, "" },
+            { "optic_Aco_smg", "ACO", 2750, 1375, "" },
+            { "acc_flashlight", "Gun Light", 750, 375, "" },
+            { "KA_ANPEQ15_Black_IR", "Laser", 1200, 600, "" }
+        };
+    };
 
-            { "SMG_02_F", "", 30000, 1500, "call life_coplevel >= 1" },         
-            
+    class cop_corporal {                    /// --- SAPS Corporal
+        name = "Patrol Officer Shop";
+        side = "cop";
+        license = "";
+        level[] = { "life_coplevel", "SCALAR", 2, "You must be a Corporal Rank!" };
+        items[] = {
+            { "SMG_03C_TR_black", "P90 PDW", 3500, 0 },
+            { "prpl_benelli_pgs_rail", "M4 Shotgun 8rnd", 5500, 0 },
+            { "arifle_CTAR_blk_F", "CAR95", 6500, 0 },
+            //{ "arifle_CTAR_GL_blk_F", "CAR95 GL", 7500, 0 },
+            { "CSW_FN57", "FN57", 2000, 0 },
+            { "SmokeShell", "Smoke Grenade White", 2000, 0 },
+            { "HandGrenade_Stone", "Flashbang", 500, 0 },
+            { "SatchelCharge_Remote_Mag", "Satchel", 100, 0 },
+            { "Rangefinder", "Range Finder", 950, 0 }
+        };
+        mags[] = {
+            { "50Rnd_570x28_SMG_03", "50rnd P90 Mag", 200 },
+            { "30Rnd_580x42_Mag_F", "30rnd CAR Mag", 200 },
+            { "prpl_8Rnd_12Gauge_Pellets", "8rnd Buckshot", 125 },
+            { "prpl_8Rnd_12Gauge_Slug", "6rnd Slug", 150 },
+            //{ "1Rnd_Smoke_Grenade_shell", "GL Smoke Grenade White", 80 },
+            //{ "UGL_FlareCIR_F", "GL IR Round", 80 },
+            //{ "UGL_FlareWhite_F", "GL Flare Grenade White", 80 },
+            { "CSW_20Rnd_57x28_SS190", "20rnd FN57 Clip", 80 }
+        };
+        accs[] = {
+            { "optic_Aco", "ACO", 300, 0 },
+            { "optic_Arco_blk_F", "ARCO", 500, 0 },
+            { "optic_Hamr", "RCO", 550, 0 },
+            { "optic_NVS", "NVS Optic", 1200, 0 },
+            { "acc_flashlight", "Gun Light", 60, 0 },
+            { "CSW_FN57_flashlight_glare_2", "FN57 Pistol Light", 50, 0 },
+            { "muzzle_snds_570", "P90 Suppressor", 850, 0 },
+            { "CSW_FN57_silencer1", "FN57 Suppressor", 750, 0 }
+        };
+    };
 
-            //================================
-            //============ CORPORAL ==========
-            //================================
-    
-            { "SMG_03C_TR_black", "", 3500, , "call life_coplevel >= 2" },      
-            { "prpl_benelli_pgs_rail", "", 5500, , "call life_coplevel >= 2" }, 
-            { "arifle_CTAR_blk_F", "", 6500, , "call life_coplevel >= 2" },     
-            { "CSW_FN57", "", 5500, , "call life_coplevel >= 2" },      
-            { "SatchelCharge_Remote_Mag", "", 5500, , "call life_coplevel >= 2" },      
-            { "Rangefinder", "", 5500, , "call life_coplevel >= 2" },       
+    class cop_sergeant {                                    // SAPS Sergeant
+        name = "Sergeant Officer Shop";
+        side = "cop";
+        license = "";
+        level[] = { "life_coplevel", "SCALAR", 3, "You must be a Sergeant Rank!" };
+        items[] = {
+            { "SMG_03C_TR_black", "P90 PDW", 3500, 0 },
+            { "prpl_benelli_pgs_rail", "M4 Shotgun 8rnd", 5500, 0 },
+            { "arifle_CTAR_blk_F", "CAR95", 6500, 0 },
+            { "arifle_CTAR_GL_blk_F", "CAR95 GL", 7500, 0 },
+            { "arifle_CTARS_blk_F", "CAR95 LMG", 12000, 0 },
+            { "srifle_DMR_07_blk_F", "CMR Marksman", 14500, 0 },
+            { "CSW_FN57", "FN57", 2000, 0 },
+            { "CSW_FN57", "FN57 + Shield", 3000, 0 },
+            { "SmokeShell", "Smoke Grenade White", 2000, 0 },
+            { "HandGrenade_Stone", "Flashbang", 500, 0 },
+            { "SatchelCharge_Remote_Mag", "Satchel", 100, 0 },
+            { "Rangefinder", "Range Finder", 950, 0 }
+        };
+        mags[] = {
+            { "50Rnd_570x28_SMG_03", "50rnd P90 Mag", 200 },
+            { "30Rnd_580x42_Mag_F", "30rnd CAR Mag", 200 },
+            { "100Rnd_580x42_Mag_F", "100rnd CAR Box", 450 },
+            { "20Rnd_650x39_Cased_Mag_F", "20rnd CAR Clip", 350 },
+            { "prpl_8Rnd_12Gauge_Pellets", "8rnd Buckshot", 125 },
+            { "prpl_8Rnd_12Gauge_Slug", "6rnd Slug", 150 },
+            { "1Rnd_Smoke_Grenade_shell", "GL Smoke Grenade White", 80 },
+            { "UGL_FlareCIR_F", "GL IR Round", 80 },
+            { "UGL_FlareWhite_F", "GL Flare Grenade White", 80 },
+            { "CSW_20Rnd_57x28_SS190", "20rnd FN57 Clip", 80 }
+        };
+        accs[] = {
+            { "optic_Aco", "ACO", 300, 0 },
+            { "optic_Arco_blk_F", "ARCO", 500, 0 },
+            { "optic_Hamr", "RCO", 550, 0 },
+            { "optic_SOS", "MOS", 550, 0 },
+            { "optic_NVS", "NVS Optic", 1200, 0 },
+            { "acc_flashlight", "Gun Light", 60, 0 },
+            { "CSW_FN57_flashlight_glare_2", "FN57 Pistol Light", 50, 0 },
+            { "CSW_FN57_laser_green_2", "FN57 Pistol Laser", 80, 0 },
+            { "CSW_FN57_Shield_P", "FN57 Ballistic Shield", 450, 0 },
+            { "muzzle_snds_570", "P90 Suppressor", 850, 0 },
+            { "CSW_FN57_silencer1", "FN57 Suppressor", 750, 0 }
+        };
+    };
 
-            //================================
-            //============ SERGEANT ==========
-            //================================  
-    
-            { "arifle_CTAR_GL_blk_F", "", 12000, , "call life_coplevel >= 2" }, 
-            { "arifle_CTARS_blk_F", "", 14500, , "call life_coplevel >= 2" },   
-            { "srifle_DMR_07_blk_F", "", 14500, , "call life_coplevel >= 2" },  
-            { "CSW_FN57", "", 3000, , "call life_coplevel >= 2" },          
-            { "SatchelCharge_Remote_Mag", "", 3000, , "call life_coplevel >= 2" },
+    class cop_lieutenant {                          //  SAPS Lieutenant
+        name = "Master Sergeant Shop";
+        side = "cop";
+        license = "";
+        level[] = { "life_coplevel", "SCALAR", 4, "You must be a Lieutenant Rank!" };
+        items[] = {
+            { "SMG_03C_TR_black", "P90 PDW", 3500, 0 },
+            { "prpl_benelli_pgs_rail", "M4 Shotgun 8rnd", 5500, 0 },
+            { "arifle_CTAR_blk_F", "CAR95", 6500, 0 },
+            { "arifle_CTAR_GL_blk_F", "CAR95 GL", 7500, 0 },
+            { "arifle_CTARS_blk_F", "CAR95 LMG", 12000, 0 },
+            { "srifle_DMR_07_blk_F", "CMR Marksman", 14500, 0 },
+            { "arifle_ARX_blk_F", "Type115", 25000, 0 },
+            { "STI_M32", "MGL", 7000, 0 },
+            { "CSW_FN57", "FN57", 2000, 0 },
+            { "CSW_FN57", "FN57 + Shield", 3000, 0 },
+            { "CSW_M26C", "Taser TEST", 0, 0 },
+            { "KA_M14", "TEST Grenade", 0, 0 },
+            { "KA_M7290", "TEST Grenade", 0, 0 },
+            { "KA_M7A3", "TEST Grenade", 0, 0 },
+            { "KA_M814", "TEST Grenade", 0, 0 },
+            { "KA_M84", "TEST Grenade", 0, 0 },
+            //{ "NVGogglesB_blk_F", "TEST NVG", 0, 0 },
+            { "HandGrenade_Stone", "Flashbang", 500, 0 },
+            { "SatchelCharge_Remote_Mag", "Satchel", 100, 0 },
+            { "Rangefinder", "Range Finder", 950, 0 }
+        };
+        mags[] = {
+            { "50Rnd_570x28_SMG_03", "50rnd P90 Mag", 200 },
+            { "CSW_Taser_Probe_Mag", "TAZER clip TEST", 0 },
+            { "30Rnd_580x42_Mag_F", "30rnd CAR Mag", 200 },
+            { "100Rnd_580x42_Mag_F", "100rnd CAR Box", 450 },
+            { "20Rnd_650x39_Cased_Mag_F", "20rnd CAR Clip", 350 },
+            { "prpl_8Rnd_12Gauge_Pellets", "8rnd Buckshot", 125 },
+            { "prpl_8Rnd_12Gauge_Slug", "6rnd Slug", 150 },
+            { "1Rnd_Smoke_Grenade_shell", "GL Smoke Grenade White", 80 },
+            { "UGL_FlareCIR_F", "GL IR Round", 80 },
+            { "UGL_FlareWhite_F", "GL Flare Grenade White", 80 },
+            { "CSW_20Rnd_57x28_SS190", "20rnd FN57 Clip", 80 },
+            { "30Rnd_65x39_caseless_green", "30rnd Type115", 500 },
+            { "10Rnd_50BW_Mag_F", "10rnd BW 50cal", 650 },
+            { "CSW_20Rnd_57x28_SS190", "20rnd FN57 Clip", 80 },
+            { "6Rnd_Smoke_Grenade_M32_pack", "6rnd MGL Smoke White", 80 },
+            { "6Rnd_FlareWhite_M32_pack", "6rnd MGL Flare White", 80 },
+            { "6Rnd_FlareCIR_M32_pack", "6rnd MGL IR", 80 },
+            { "CSW_20Rnd_57x28_SS190", "20rnd FN57 Clip", 80 }
+        };
+        accs[] = {
+            { "optic_Aco", "ACO", 300, 0 },
+            { "optic_Arco_blk_F", "ARCO", 500, 0 },
+            { "optic_Hamr", "RCO", 550, 0 },
+            { "optic_SOS", "MOS", 550, 0 },
+            { "optic_NVS", "NVS Optic", 1200, 0 },
+            { "acc_flashlight", "Gun Light", 60, 0 },
+            { "CSW_FN57_flashlight_glare_2", "FN57 Pistol Light", 50, 0 },
+            { "CSW_FN57_laser_green_2", "FN57 Pistol Laser", 80, 0 },
+            { "CSW_FN57_Shield_P", "FN57 Ballistic Shield", 450, 0 },
+            { "muzzle_snds_570", "P90 Suppressor", 850, 0 },
+            { "CSW_FN57_silencer1", "FN57 Suppressor", 750, 0 },
+            { "muzzle_snds_65_TI_blk_F", "Type115 Suppressor", 800, 0 },
+            { "bipod_02_F_blk", "Bipod", 50, 0 }
+        };
+    };
 
+    class cop_chief {                  // not in use yet
+        name = "Chief Shop";
+        side = "cop";
+        license = "";
+        level[] = { "life_coplevel", "SCALAR", 6, "You must be a Sergeant Rank!" };
+        items[] = {
 
-
-
-    
-    
-    
-    
-            
-            
         };
         mags[] = {
             
-            //================================
-            //============ CADET  ============
-            //================================
-            
-            
-            { "16Rnd_9x21_Mag", "", 125, 60, "" },
-            { "20Rnd_556x45_UW_mag", $STR_W_mags_TaserRifle, 125, 60, "" },
-            { "30Rnd_9x21_Red_Mag", "", 125, 60, "" },
-            { "30Rnd_9x21_Mag_SMG_02", "", 125, 60, "" },
-            { "30Rnd_9x21_Mag", "", 250, 125, "" },
-
-            //================================
-            //============ CORPORAL ==========
-            //================================
-
-            { "50Rnd_570x28_SMG_03", "", 200, , "call life_coplevel >= 2" },                
-            { "30Rnd_580x42_Mag_F", "", 200, , "call life_coplevel >= 2" },
-            { "prpl_8Rnd_12Gauge_Pellets", "", 200, , "call life_coplevel >= 2" },          
-            { "prpl_8Rnd_12Gauge_Slug", "", 200, , "call life_coplevel >= 2" },                     
-            { "CSW_20Rnd_57x28_SS190", "", 200, , "call life_coplevel >= 2" },                  
-            
-            //================================
-            //============ SERGEANT ==========
-            //================================
-
-            { "100Rnd_580x42_Mag_F", "", 450, , "call life_coplevel >= 2" },
-            { "20Rnd_650x39_Cased_Mag_F", "", 350, , "call life_coplevel >= 2" },
-            { "1Rnd_Smoke_Grenade_shell", "", 80, , "call life_coplevel >= 2" },
-            { "UGL_FlareCIR_F", "", 80, , "call life_coplevel >= 2" },
-            { "UGL_FlareWhite_F", "", 80, , "call life_coplevel >= 2" }
-    
-            
-            
-            
-            
-            
         };
         accs[] = {
-            
-            
-            //================================
-            //============ ALL RANKS =========
-            //================================
 
-            
-            { "muzzle_snds_L", "", 650, 325, "" },
-
-  
-            
-            
-            
-            //================================
-            //============ CADET  ============
-            //================================
-            
-            { "optic_MRD", "", 2750, 1375, "call life_coplevel >= 1" },
-            { "optic_Aco_smg", "ACO", 2750, 1375, "call life_coplevel >= 1" },
-            { "KA_ANPEQ15_Black_IR", "Laser", 1200, 600, "call life_coplevel >= 1" },
-    
-            
-            
-            //================================
-            //============ CORPORAL ==========
-            //================================          
-                        
-            { "optic_Aco", "", 500, , "call life_coplevel >= 2" },
-            { "optic_Arco_blk_F", "", 500, , "call life_coplevel >= 2" },
-            { "optic_Hamr", "", 550, , "call life_coplevel >= 2" },
-            { "optic_NVS", "", 1250, , "call life_coplevel >= 2" },
-            { "CSW_FN57_flashlight_glare_2", "", , "call life_coplevel >= 2" },
-            { "CSW_FN57_silencer1", "", 2750, , "call life_coplevel >= 2" },
-
-            
-            //================================
-            //============ SERGEANT ==========
-            //================================              
-        
-            { "optic_SOS", "", 550, , "call life_coplevel >= 2" },      
-            { "acc_flashlight", "", 50, , "call life_coplevel >= 2" },
-            { "CSW_FN57_laser_green_2", "", 80, , "call life_coplevel >= 2" },
-            { "CSW_FN57_Shield_P", "", 450, , "call life_coplevel >= 2" },          
-            { "muzzle_snds_570", "", 450, , "call life_coplevel >= 2" },            
-            { "CSW_FN57_silencer1", "", 850, , "call life_coplevel >= 2" }                  
-            
-
-        
-            
-            
         };
     };
 
@@ -302,12 +368,16 @@ class WeaponShops {
     class med_basic {
         name = "store";
         side = "med";
-        conditions = "";
+        license = "";
+        level[] = { "", "", -1, "" };
         items[] = {
-            { "ItemGPS", "", 100, 50, "" },
-            { "Binocular", "", 150, 75, "" },
-            { "FirstAidKit", "", 150, 75, "" },
-            { "NVGoggles", "", 1200, 600, "" }
+             { "ItemGPS", "GPS", 50, 0 },
+            { "ItemMap", "Map", 25, 0 },
+            { "ItemGPS", "", 100, 45 },
+            { "FirstAidKit", "", 150, 65 },
+            { "NVGoggles", "", 1200, 980 },
+            { "ACRE_PRC152", "Short Radio 5KM", 500, 50 },
+            { "ACRE_PRC117F", "Long Radio 10KM", 1500, 50 }
         };
         mags[] = {};
         accs[] = {};
