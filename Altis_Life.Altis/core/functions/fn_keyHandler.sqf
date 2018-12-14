@@ -222,8 +222,8 @@ switch (_code) do {
         };
     };
 
-    //F Key
-    case 33: {
+    //H Key
+    case 35: {
         if (playerSide in [west,independent] && {vehicle player != player} && {!life_siren_active} && {((driver vehicle player) == player)}) then {
             [] spawn {
                 life_siren_active = true;
