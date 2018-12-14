@@ -119,13 +119,9 @@ class CarShops {
             { "O_Truck_03_medical_F", "" },
             { "B_Truck_01_medical_F", "" },
             { "ESM_206", "" },
-<<<<<<< HEAD
             //{ "EMS_raptor", "" },
-            { "ES_Ambulance", "" }  
-=======
-            { "EMS_raptor", "" },
             { "ES_Ambulance"", "" }         
->>>>>>> origin/Vehicle_Config
+
         };
     };
 
