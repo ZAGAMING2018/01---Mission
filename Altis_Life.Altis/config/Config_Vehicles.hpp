@@ -120,7 +120,7 @@ class CarShops {
             { "B_Truck_01_medical_F", "" },
             { "ESM_206", "" },
             //{ "EMS_raptor", "" },
-            { "ES_Ambulance"", "" }         
+            { "ES_Ambulance", "" }         
 
         };
     };
