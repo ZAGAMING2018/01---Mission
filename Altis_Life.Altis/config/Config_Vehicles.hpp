@@ -26,22 +26,22 @@ class CarShops {
             { "C_SUV_01_F", "" },
             { "C_Hatchback_01_sport_F", "" },
             { "C_Van_01_transport_F", "" },
+            { "C_Offroad_02_unarmed_F", "" },
             { "BMW_X6", "" },
-            //{ "Yamaha_xmax", "" }, 
-            { "Golf_1", "" },   
-           // { "Golf_2", "" },  
-           // { "Golf_GTI_MK2", "" }, 
-            //{ "Peugot_206", "" },   
-            //{ "Honda_civic", "" },  
-            //{ "Crown_vic", "" },   
-           // { "BMW_M3", "" },  
-           // { "Golf_R6", "" },  
-           // { "Nissan_SilviaS15", "" },
-            //{ "Audio_RS3", "" },    
-           // { "Seat_Cupra", "" },  
-           // { "Mitsubishi_LancerEvo", "" },
-           // { "VW_Toureg", "" },              
-            { "C_Offroad_02_unarmed_F", "" } //Apex DLC
+            { "Yamaha_xmax", "" },
+            { "Golf_1", "" },
+            { "Golf_2", "" },
+            { "Golf_GTI_MK2", "" },
+            { "Peugot_206", "" },
+            { "Honda_civic", "" },
+            { "Crown_vic", "" },
+            { "BMW_M3", "" },
+            { "Golf_R6", "" },
+            { "Nissan_SilviaS15", "" },
+            { "Audio_RS3", "" },
+            { "Seat_Cupra", "" },
+            { "Mitsubishi_LancerEvo", "" },
+            { "VW_Toureg", "" }
         };
     };
 
@@ -117,11 +117,7 @@ class CarShops {
             { "C_Offroad_01_F", "" },
             { "I_Truck_02_medical_F", "" },
             { "O_Truck_03_medical_F", "" },
-            { "B_Truck_01_medical_F", "" },
-            { "ESM_206", "" },
-            //{ "EMS_raptor", "" },
-            { "ES_Ambulance", "" }         
-
+            { "B_Truck_01_medical_F", "" }
         };
     };
 
@@ -142,28 +138,7 @@ class CarShops {
             { "C_SUV_01_F", "" },
             { "C_Hatchback_01_sport_F", "call life_coplevel >= 1" },
             { "B_MRAP_01_F", "call life_coplevel >= 2" },
-            { "B_MRAP_01_hmg_F", "call life_coplevel >= 3" },
-            
-            
-            { "SAPS_Transport_Van", "" },
-            { "SAPS_JEEP", "" },
-            { "SAPS_GOLF6", "" },
-            { "SAPS_WRC", "" },
-            { "SAPS_Touereg", "" },
-            { "SAPS_raptor", "" },
-            //{ "SAPS_raptor_unmarked", "" },
-           // { "SAPS_Warrior", "" },
-            { "SAPS_M4", "" },
-            { "SAPS_GTR", "" },
-            { "SAPS_Interceptor", "" },
-            { "SAPS_Swat_Ifrit", "" }
-            
-            
-            
-            
-            
-            
-            
+            { "B_MRAP_01_hmg_F", "call life_coplevel >= 3" }
         };
     };
 
@@ -221,125 +196,212 @@ class LifeCfgVehicles {
         price = -1;
         textures[] = {};
     };
-    
-    
 
    class ESM_206 {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
         textures[] = {};
-    };       
+    };
 
    class EMS_raptor {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
         textures[] = {};
-    };       
+    };
 
    class ES_Ambulance {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
         textures[] = {};
-    };           
-    
-    
-class SAPS_Transport_Van {
+    };
+
+    class SAPS_Transport_Van {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
         textures[] = {};
-    };          
-    
+    };
+
    class SAPS_JEEP {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
         textures[] = {};
-    };          
-    
+    };
+
    class SAPS_GOLF6 {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
         textures[] = {};
-    };          
-    
+    };
+
    class SAPS_WRC {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
         textures[] = {};
-    };          
+    };
 
-    
+
    class SAPS_raptor {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
         textures[] = {};
-    };    
+    };
    class SAPS_raptor_unmarked {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
         textures[] = {};
-    };    
+    };
    class SAPS_Warrior {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
         textures[] = {};
-    };    
+    };
    class SAPS_Touereg {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
         textures[] = {};
-    };    
+    };
    class SAPS_M4 {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
         textures[] = {};
-    };    
+    };
    class SAPS_GTR {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
         textures[] = {};
-    };      
-    
+    };
+
    class SAPS_Swat_Ifrit {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
         textures[] = {};
-    };          
+    };
 
    class SAPS_Interceptor {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
         textures[] = {};
-    };          
+    };
+
+    class BMW_X6 {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };
+
+    class Audio_RS3 {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };
+
+    class Yamaha_xmax {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };
+
+    class Golf_2 {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };
 
     class Golf_1 {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
         textures[] = {};
-    };          
-   
-    class BMW_X6 {
+    };
+
+    class Golf_GTI_MK2 {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
         textures[] = {};
-    };  
-    
+    };
+
+    class Peugot_206 {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };
+
+    class Honda_civic {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };
+
+    class Crown_vic {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };
+
+    class BMW_M3 {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };
+
+    class Golf_R6 {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };
+
+    class Nissan_SilviaS15 {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };
+
+    class Seat_Cupra {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };
+
+    class Mitsubishi_LancerEvo {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };
+
+    class VW_Toureg {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };
 
     // Apex DLC
     class C_Boat_Transport_02_F {
