@@ -20,27 +20,28 @@ class CarShops {
         side = "civ";
         conditions = "";
         vehicles[] = {
-            { "chGolfI", "" },          
-            { "chGolfII", "" },         
-            { "V12_MK22", "" },
-            //{ "AlessioVIR", "" },     
-            //{ "V12_AE86_INTIAL_D", "" },          
-            { "V12_CUPRA3", "" },
-            { "V12_S15_GRIS", "" },
-            { "AlessioIXMR", "" },                  
-            //{ "AlessioRS4", "" },         
-            //{ "AlessioWRX", "" },
-            
-            { "AlessioBM4", "" },           
-            { "AlessioM5", "" },        
-            { "V12_X6", "" },           
-            //{ "AlessioMustangGold", "" },                     
-            { "V12_R34M_NOIR", "" },                        
-                
-            { "AlessioTouaregM", "" },              
-            { "AlessioGTRG", "" }                       
-
-            
+            { "B_Quadbike_01_F", "" },
+            { "C_Hatchback_01_F", "" },
+            { "C_Offroad_01_F", "" },
+            { "C_SUV_01_F", "" },
+            { "C_Hatchback_01_sport_F", "" },
+            { "C_Van_01_transport_F", "" },
+            { "BMW_X6", "" },
+            //{ "Yamaha_xmax", "" }, 
+            { "Golf_1", "" },   
+           // { "Golf_2", "" },  
+           // { "Golf_GTI_MK2", "" }, 
+            //{ "Peugot_206", "" },   
+            //{ "Honda_civic", "" },  
+            //{ "Crown_vic", "" },   
+           // { "BMW_M3", "" },  
+           // { "Golf_R6", "" },  
+           // { "Nissan_SilviaS15", "" },
+            //{ "Audio_RS3", "" },    
+           // { "Seat_Cupra", "" },  
+           // { "Mitsubishi_LancerEvo", "" },
+           // { "VW_Toureg", "" },              
+            { "C_Offroad_02_unarmed_F", "" } //Apex DLC
         };
     };
 
@@ -84,7 +85,7 @@ class CarShops {
         };
     };
 
-    class civ_ship {
+     class civ_ship {
         side = "civ";
         conditions = "";
         vehicles[] = {
@@ -113,15 +114,10 @@ class CarShops {
         side = "med";
         conditions = "";
         vehicles[] = {
-           // { "EMS_RS4_lights", "" },
-           
-           
             { "C_Offroad_01_F", "" },
             { "I_Truck_02_medical_F", "" },
             { "O_Truck_03_medical_F", "" },
-            { "B_Truck_01_medical_F", "" },
-            { "ES_Ambulance", "" }
-
+            { "B_Truck_01_medical_F", "" }
         };
     };
 
@@ -129,8 +125,8 @@ class CarShops {
         side = "med";
         conditions = "";
         vehicles[] = {
-            
-            { "EMS_M900", "" }
+            { "B_Heli_Light_01_F", "" },
+            { "O_Heli_Light_02_unarmed_F", "" }
         };
     };
 
@@ -138,21 +134,41 @@ class CarShops {
         side = "cop";
         conditions = "";
         vehicles[] = {
-            { "SAPS_GOLF6", "" },
-            { "SAPS_JEEP", "" },
-            { "SAPS_Touereg", "" },
-            { "SAPS_WRC", "" },
+            { "C_Offroad_01_F", "" },
+            { "C_SUV_01_F", "" },
+            { "C_Hatchback_01_sport_F", "call life_coplevel >= 1" },
+            { "B_MRAP_01_F", "call life_coplevel >= 2" },
+            { "B_MRAP_01_hmg_F", "call life_coplevel >= 3" },
+            
+            
             { "SAPS_Transport_Van", "" },
+            { "SAPS_JEEP", "" },
+            { "SAPS_GOLF6", "" },
+            { "SAPS_WRC", "" },
+            { "SAPS_Touereg", "" },
+            { "SAPS_raptor", "" },
+            //{ "SAPS_raptor_unmarked", "" },
+           // { "SAPS_Warrior", "" },
+            { "SAPS_M4", "" },
             { "SAPS_GTR", "" },
-            { "SAPS_M4", "" }
+            { "SAPS_Interceptor", "" },
+            { "SAPS_Swat_Ifrit", "" }
+            
+            
+            
+            
+            
+            
+            
         };
     };
 
     class cop_air {
         side = "cop";
-        conditions = "";
+        conditions = "call life_coplevel >= 3";
         vehicles[] = {
-            { "SAPS_helicopter", "" },
+            { "B_Heli_Light_01_F", "" },
+            { "B_Heli_Transport_01_F", "call life_coplevel >= 4" }
         };
     };
 
@@ -201,6 +217,112 @@ class LifeCfgVehicles {
         price = -1;
         textures[] = {};
     };
+    
+    
+    
+    
+    
+    
+    
+   class SAPS_Transport_Van {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };          
+    
+   class SAPS_JEEP {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };          
+    
+   class SAPS_GOLF6 {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };          
+    
+   class SAPS_WRC {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };          
+
+    
+   class SAPS_raptor {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };    
+   class SAPS_raptor_unmarked {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };    
+   class SAPS_Warrior {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };    
+   class SAPS_Touereg {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };    
+   class SAPS_M4 {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };    
+   class SAPS_GTR {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };      
+    
+   class SAPS_Swat_Ifrit {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };          
+
+   class SAPS_Interceptor {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };          
+
+    
+    
+    
+    
+  
+    class Golf_1 {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };          
+   
+    class BMW_X6 {
+        vItemSpace = 30;
+        conditions = "";
+        price = 7000;
+        textures[] = {};
+    };  
+    
 
     // Apex DLC
     class C_Boat_Transport_02_F {
@@ -361,219 +483,7 @@ class LifeCfgVehicles {
             }, "" }
         };
     };
-    
 
-    
-        class chGolfI {
-        vItemSpace = 10;
-        conditions = "";
-        price = 8000;
-        textures[] = {
-            { "Black", "civ", {
-                "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_black_co.paa"
-            }, "" },
-            { "Blue", "civ", {
-                "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_blue_co.paa"
-            }, "" },
-            { "Green", "civ", {
-                "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_green_co.paa"
-            }, "" },
-            { "Orange", "civ", {
-                "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_orange_co.paa"
-            }, "" },
-            { "Red", "civ", {
-                "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_red_co.paa"
-            }, "" },
-            { "White", "civ", {
-                "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_white_co.paa"
-            }, "" }
-        };
-    };
-    
-    
-        class chGolfII {
-        vItemSpace = 12;
-        conditions = "";
-        price = 10000;
-        textures[] = {};
-    };
-        class V12_MK22 {
-        vItemSpace = 12;
-        conditions = "";
-        price = 18900;
-        textures[] = {};
-    };
-    
-        class V12_CUPRA3 {
-        vItemSpace = 12;
-        conditions = "";
-        price = 95000;
-        textures[] = {};
-    };
-    
-        class AlessioBM4 {
-        vItemSpace = 15;
-        conditions = "";
-        price = 280000;
-        textures[] = {};
-    };
-    
-        class AlessioM5 {
-        vItemSpace = 15;
-        conditions = "";
-        price = 335000;
-        textures[] = {};
-    };  
-    
-        class V12_X6 {
-        vItemSpace = 18;
-        conditions = "";
-        price = 889000;
-        textures[] = {};
-    };  
-    
-        class V12_R34M_NOIR {
-        vItemSpace = 15;
-        conditions = "";
-        price = 520000;
-        textures[] = {};
-    };  
-    
-        
-        class V12_S15_GRIS {
-        vItemSpace = 15;
-        conditions = "";
-        price = 280000;
-        textures[] = {};
-    };      
-    
-    
-    
-        class AlessioGTRG {
-        vItemSpace = 15;
-        conditions = "";
-        price = 2500000;
-        textures[] = {};
-    };      
-    
-    
-        class AlessioTouaregM {
-        vItemSpace = 19;
-        conditions = "";
-        price = 1500000;
-        textures[] = {};
-    };  
-    
-
-        class AlessioIXMR {
-        vItemSpace = 19;
-        conditions = "";
-        price = 350000;
-        textures[] = {};
-    };  
-    
-    
-    
-    
-    
-    
-    
-    
-//==========================================================
-//=========================SAPS=============================
-//==========================================================
-    
-    
-    
-    
-    
-        class EMS_M900 {
-        vItemSpace = 30;
-        conditions = "";
-        price = 9000;
-        textures[] = {};
-    };  
-    
-        class SAPS_helicopter {
-        vItemSpace = 30;
-        conditions = "";
-        price = 9000;
-        textures[] = {};
-    };  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        class SAPS_GOLF6 {
-        vItemSpace = 30;
-        conditions = "";
-        price = 30000;
-        textures[] = {};
-    };  
-    
-        class SAPS_JEEP {
-        vItemSpace = 30;
-        conditions = "";
-        price = 18500;
-        textures[] = {};
-    };      
-    
-        class SAPS_Touereg {
-        vItemSpace = 30;
-        conditions = "";
-        price = 95000;
-        textures[] = {};
-    };  
-    
-    
-        class SAPS_WRC {
-        vItemSpace = 30;
-        conditions = "";
-        price = 45000;
-        textures[] = {};
-    };  
-
-
-        class SAPS_Transport_Van {
-        vItemSpace = 30;
-        conditions = "";
-        price = 7000;
-        textures[] = {};
-    };  
-
-    
-        class SAPS_GTR {
-        vItemSpace = 30;
-        conditions = "";
-        price = 120000;
-        textures[] = {};
-    };  
-
-    
-        class SAPS_M4 {
-        vItemSpace = 30;
-        conditions = "";
-        price = 95000;
-        textures[] = {};
-    };
-
-    
-        class ES_Ambulance {
-        vItemSpace = 30;
-        conditions = "";
-        price = 6500;
-        textures[] = {};
-    };
-    
-    
-    
-    
     class I_Truck_02_medical_F {
         vItemSpace = 150;
         conditions = "";
