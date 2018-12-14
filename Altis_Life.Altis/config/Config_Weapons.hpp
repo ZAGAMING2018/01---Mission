@@ -141,8 +141,9 @@ class WeaponShops {
             { "NVGoggles_OPFOR", "NVG Blk", 2000, 980 },
             { "NVGoggles_INDEP", "NVG Grn", 2000, 980 },
             { "NVGoggles_tna_F", "NVG Tpc", 2000, 980 },
-            { "ACRE_PRC152", "Short Radio 5KM", 500, 50 },
-            { "ACRE_PRC117F", "Long Radio 20KM", 1500, 50 }
+            { "tf_anprc152", "Short Radio 5KM", 500, 50 },
+            { "tf_rt1523g_bwmod", "Long Radio 20KM", 1500, 50 },
+            { "tf_rt1523g_black", "Long Radio 20KM", 1500, 50 }
         };
         mags[] = {};
         accs[] = {};
@@ -161,8 +162,8 @@ class WeaponShops {
             { "ItemWatch", "", 250, 0 },
             { "FirstAidKit", "", 750, 0 },
             { "NVGoggles", "", 10000, 0 },
-            { "ACRE_PRC152", "Short Radio 5KM", 500, 0 },
-            { "ACRE_PRC117F", "Long Radio 20KM", 1500, 0 }
+            { "tf_anprc152", "Short Radio 5KM", 500, 0 },
+            { "tf_rt1523g_bwmod", "Long Radio 20KM", 1500, 0 }
         };
         mags[] = {};
         accs[] = {};
@@ -181,8 +182,8 @@ class WeaponShops {
             { "ItemGPS", "", 75, 0 },
             { "FirstAidKit", "", 50, 0 },
             { "NVGoggles", "", 1500, 980 },
-            { "ACRE_PRC152", "Short Radio 5KM", 250, 0 },
-            { "ACRE_PRC117F", "Long Radio 20KM", 500, 0 },
+            { "tf_anprc152", "Short Radio 5KM", 250, 0 },
+            { "tf_rt1523g_bwmod", "Long Radio 20KM", 500, 0 },
             //{ "SatchelCharge_Remote_Mag", "Explosives", 500, 0 },
             { "SMG_02_F", "Sting PDW 9mm", 1500, 0 }        
         };
@@ -376,8 +377,8 @@ class WeaponShops {
             { "ItemGPS", "", 100, 45 },
             { "FirstAidKit", "", 150, 65 },
             { "NVGoggles", "", 1200, 980 },
-            { "ACRE_PRC152", "Short Radio 5KM", 500, 50 },
-            { "ACRE_PRC117F", "Long Radio 10KM", 1500, 50 }
+            { "tf_anprc152", "Short Radio 5KM", 500, 50 },
+            { "tf_rt1523g_bwmod", "Long Radio 10KM", 1500, 50 }
         };
         mags[] = {};
         accs[] = {};
