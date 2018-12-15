@@ -299,87 +299,75 @@ class Clothing {
         side = "civ";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
-            { "U_IG_Guerilla1_1", "", 5000, "" },
-            { "U_I_G_Story_Protagonist_F", "", 7500, "" },
-            { "U_I_G_resistanceLeader_F", "", 11500, "" },
-            { "U_IG_leader", "", 15340, "" },
-            { "U_O_PilotCoveralls", "", 15610, "" },
-            { "U_O_SpecopsUniform_ocamo", "", 17500, "" },
-            { "U_O_GhillieSuit", "", 50000, "" },
-            { "U_B_T_Soldier_F", "", 50000, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_1_F", "", 50000, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_2_F", "", 51000, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_3_F", "", 50032, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_4_F", "", 50020, "" }, //Apex DLC
-            { "U_I_C_Soldier_Bandit_5_F", "", 50020, "" }, //Apex DLC
-            { "U_I_C_Soldier_Camo_F", "", 52000, "" } //Apex DLC
+            { "U_I_C_Soldier_Para_2_F", "Militia Fatigues (Illegal)", 5000, "" },
+            { "U_I_C_Soldier_Para_3_F", "Militia Fatigues (Illegal)", 5000, "" },            
+            { "U_I_C_Soldier_Para_4_F", "Militia Fatigues (Illegal)", 5000, "" },
+            { "U_I_C_Soldier_Para_1_F", "Militia Fatigues (Illegal)", 5000, "" },
+            { "U_I_C_Soldier_Camo_F", "Militia Fatigues (Illegal)", 5000, "" },
+            { "U_I_G_Story_Protagonist_F", "Militia Fatigues (Illegal)", 5000, "" }
+
+
         };
+
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
-            { "H_Bandanna_camo", "", 650, "" },
-            { "H_ShemagOpen_khk", "", 800, "" },
-            { "H_ShemagOpen_tan", "", 850, "" },
-            { "H_Shemag_olive", "", 850, "" },
-            { "H_HelmetO_ocamo", "", 2500, "" }
+            { "H_ShemagOpen_khk", "Shemag (Illegal)", 800, "" },
+            { "H_ShemagOpen_tan", "Shemag (Illegal)", 850, "" },            
+            { "H_Shemag_olive", "Shemag (Illegal)", 850, "" },
+            { "H_PASGT_basic_olive_F", "Mask (Illegal)", 850, "" },            
+            { "H_PASGT_basic_black_F", "Mask (Illegal)", 850, "" }
         };
+
         goggles[] = {
             { "NONE", $STR_C_Remove_goggles, 0, "" },
-            { "G_Shades_Black", "", 20, "" },
-            { "G_Shades_Blue", "", 20, "" },
-            { "G_Sport_Blackred", "", 25, "" },
-            { "G_Sport_Checkered", "", 25, "" },
-            { "G_Sport_Blackyellow", "", 25, "" },
-            { "G_Sport_BlackWhite", "", 25, "" },
-            { "G_Lowprofile", "", 30, "" },
-            { "G_Squares", "", 50, "" },
-            { "G_Combat", "", 125, "" },
-            { "G_Balaclava_blk", "", 150, "" },
-            { "G_Balaclava_combat", "", 150, "" },
-            { "G_Balaclava_lowprofile", "", 150, "" },
-            { "G_Balaclava_oli", "", 150, "" },
-            { "G_Bandanna_aviator", "", 150, "" },
-            { "G_Bandanna_beast", "", 150, "" },
-            { "G_Bandanna_blk", "", 150, "" },
-            { "G_Bandanna_khk", "", 150, "" },
-            { "G_Bandanna_oli", "", 150, "" },
-            { "G_Bandanna_shades", "", 150, "" },
-            { "G_Bandanna_sport", "", 150, "" },
-            { "G_Bandanna_tan", "", 150, "" }
+            { "G_Balaclava_blk", "Balaclava (Illegal)", 150, "" },
+            { "G_Balaclava_combat", "Balaclava (Illegal)", 150, "" },
+            { "G_Balaclava_lowprofile", "Balaclava (Illegal)", 150, "" },
+            { "G_Balaclava_oli", "Balaclava (Illegal)", 150, "" },            
+            { "G_Balaclava_TI_G_blk_F", "Balaclava (Illegal)", 150, "" },
+            { "G_Balaclava_TI_blk_F", "Balaclava (Illegal)", 150, "" },
+            { "G_Bandanna_beast", "Bandana (Illegal)", 150, "" },
+            { "G_Bandanna_blk", "Bandana (Illegal)", 150, "" },
+            { "G_Bandanna_khk", "Bandana (Illegal)", 150, "" },
+            { "G_Bandanna_oli", "Bandana (Illegal)", 150, "" },
+            { "G_Bandanna_shades", "Bandana (Illegal)", 150, "" },
+            { "G_Bandanna_sport", "Bandana (Illegal)", 150, "" },
+            { "G_Bandanna_tan", "Bandana (Illegal)", 150, "" }
         };
+
         vests[] = {
             { "NONE", $STR_C_Remove_vests, 0, "" },
             { "V_BandollierB_cbr", "", 4500, "" },
             { "V_HarnessO_brn", "", 7500, "" },
             { "V_TacVest_khk", "", 12500, "" },
             { "V_TacChestrig_grn_F", "", 17500, "" } //Apex DLC
+            { "V_TacChestrig_cbr_F", "Tac Rig (Illegal)", 6500, "" },
+            { "V_TacChestrig_grn_F", "Tac Vest (Illegal)", 6500, "" },
+            { "V_TacChestrig_oli_F", "Tac Vest (Illegal)", 9000, "" },
+            { "V_TacVest_blk", "Tac Vest (Illegal)", 9000, "" },
+            { "V_TacVest_brn", "Tac Vest (Illegal)", 9000, "" },
+            { "V_TacVest_camo", "Tac Vest (Illegal)", 9000, "" },
+            { "V_TacVest_khk", "Tac Vest (Illegal)", 9000, "" },
+            { "V_TacVest_oli", "Tac Vest (Illegal)", 9000, "" },
+            { "V_I_G_resistanceLeader_F", "Tac Vest (Illegal)", 9000, "" },
+            { "V_TacVestIR_blk", "Tac Vest (Illegal)", 10000, "" },
+            { "V_TacVest_oli", "Tac Vest (Illegal)", 12500, "" }
+
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
-            { "B_OutdoorPack_blk", "", 500, "" },
-            { "B_AssaultPack_khk", "", 2000, "" },
-            { "B_AssaultPack_dgtl", "", 2000, "" },
-            { "B_AssaultPack_rgr", "", 2000, "" },
-            { "B_AssaultPack_sgg", "", 2000, "" },
-            { "B_AssaultPack_blk", "", 2000, "" },
-            { "B_AssaultPack_cbr", "", 2000, "" },
-            { "B_AssaultPack_mcamo", "", 2000, "" },
-            { "B_TacticalPack_oli", "", 2500, "" },
-            { "B_Kitbag_mcamo", "", 3500, "" },
-            { "B_Kitbag_sgg", "", 3500, "" },
-            { "B_Kitbag_cbr", "", 3500, "" },
-            { "B_FieldPack_blk", "", 5000, "" },
-            { "B_FieldPack_ocamo", "", 5000, "" },
-            { "B_FieldPack_oucamo", "", 5000, "" },
-//            { "B_Bergen_sgg", "", 6500, "" },
-//            { "B_Bergen_mcamo", "", 6500, "" },
-//            { "B_Bergen_rgr", "", 6500, "" },
-//            { "B_Bergen_blk", "", 6500, "" },
-            { "B_Carryall_ocamo", "", 7500, "" },
-            { "B_Carryall_oucamo", "", 7500, "" },
-            { "B_Carryall_mcamo", "", 7500, "" },
-            { "B_Carryall_oli", "", 7500, "" },
-            { "B_Carryall_khk", "", 7500, "" },
-            { "B_Carryall_cbr", "", 7500, "" }
+            { "B_FieldPack_ghex_F", "Field Pack Camo (Illegal)", 2000, "" },
+            { "B_FieldPack_ocamo", "Field Pack Camo (Illegal)", 2000, "" },
+            { "B_FieldPack_oucamo", "Field Pack Camo (Illegal)", 2000, "" },
+            { "B_Carryall_ghex_F", "Carry All Camo (Illegal)", 4000, "" },
+            { "B_Carryall_ocamo", "Carry All Camo (Illegal)", 4000, "" },
+            { "B_Carryall_oucamo", "Carry All Camo (Illegal)", 4000, "" },
+            { "B_ViperLightHarness_hex_F", "Viper Pack (Illegal)", 6500, "" },
+            { "B_ViperLightHarness_ghex_F", "Viper Pack (Illegal)", 6500, "" },
+            { "B_ViperHarness_hex_F", "Viper Pack (Illegal)", 6500, "" },
+            { "B_ViperHarness_ghex_F", "Viper Pack (Illegal)", 6500, "" },            
+
+
         };
     };
 
