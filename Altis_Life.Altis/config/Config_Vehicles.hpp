@@ -20,13 +20,20 @@ class CarShops {
         side = "civ";
         conditions = "";
         vehicles[] = {
-            { "B_Quadbike_01_F", "" },
-            { "C_Hatchback_01_F", "" },
-            { "C_Offroad_01_F", "" },
-            { "C_SUV_01_F", "" },
-            { "C_Hatchback_01_sport_F", "" },
-            { "C_Van_01_transport_F", "" },
-            { "C_Offroad_02_unarmed_F", "" },
+          
+          //  { "B_Quadbike_01_F", "" },
+          //  { "C_Hatchback_01_F", "" },
+          //  { "C_Offroad_01_F", "" },
+          //  { "C_SUV_01_F", "" },
+          //  { "C_Hatchback_01_sport_F", "" },
+          //  { "C_Van_01_transport_F", "" },
+          //  { "C_Offroad_02_unarmed_F", "" },
+
+    //==================================================
+    //================== CIV ===========================
+    //==================================================
+
+
             { "BMW_X6", "" },
             { "Yamaha_xmax", "" },
             { "Golf_1", "" },
@@ -41,7 +48,24 @@ class CarShops {
             { "Audio_RS3", "" },
             { "Seat_Cupra", "" },
             { "Mitsubishi_LancerEvo", "" },
-            { "VW_Toureg", "" }
+            { "VW_Toureg", "" },
+
+    //==================================================
+    //================== EXOTICS =======================
+    //==================================================
+
+            { "YFZ_450", "" },
+            { "Ducati_Diavel", "" },
+            //{ "Harley_FXD", "" },
+            //{ "Harley_Fatboy", "" },
+            { "BMW_X6", "" },
+            { "Merc_G65", "" },
+            { "BMW_M4", "" },   
+            { "Ford_Mustang", "" }, 
+            { "Nissan_GTR_ZA", "" },        
+            { "Charger", "" }, 
+            { "Lambo_Avent", "" }
+
         };
     };
 
@@ -60,17 +84,17 @@ class CarShops {
         side = "civ";
         conditions = "";
         vehicles[] = {
-            { "C_Van_01_box_F", "" },
-            { "I_Truck_02_transport_F", "" },
-            { "I_Truck_02_covered_F", "" },
-            { "B_Truck_01_transport_F", "" },
-            { "O_Truck_03_transport_F", "" },
-            { "O_Truck_03_covered_F", "" },
-            { "B_Truck_01_box_F", "" },
-            { "O_Truck_03_device_F", "" },
-            { "C_Van_01_fuel_F", "" },
-            { "I_Truck_02_fuel_F", "" },
-            { "B_Truck_01_fuel_F", "" }
+
+            { "Ford_raptor", "" },
+            { "Warrior_civ", "" }, 
+            { "Ford_F100", "" },    
+            { "Chev_van", "" }, 
+            { "GMC_Vandura", "" },  
+            { "Mercedes_sprinter", "" },  
+            { "Zilheis", "" }, 
+            { "Renault_Midlum", "" },   
+            { "Iveco_Stalis", "" }, 
+            { "Mercedes_Actros", "" }
         };
     };
 
@@ -114,10 +138,11 @@ class CarShops {
         side = "med";
         conditions = "";
         vehicles[] = {
-            { "C_Offroad_01_F", "" },
-            { "I_Truck_02_medical_F", "" },
-            { "O_Truck_03_medical_F", "" },
-            { "B_Truck_01_medical_F", "" }
+   
+            { "ESM_206", "" },
+            { "EMS_raptor", "" },
+            { "ES_Ambulance", "" },
+
         };
     };
 
@@ -125,8 +150,10 @@ class CarShops {
         side = "med";
         conditions = "";
         vehicles[] = {
-            { "B_Heli_Light_01_F", "" },
-            { "O_Heli_Light_02_unarmed_F", "" }
+
+            { "EMS_helicopter_Lynx", "" },
+
+
         };
     };
 
@@ -134,11 +161,19 @@ class CarShops {
         side = "cop";
         conditions = "";
         vehicles[] = {
-            { "C_Offroad_01_F", "" },
-            { "C_SUV_01_F", "" },
-            { "C_Hatchback_01_sport_F", "call life_coplevel >= 1" },
-            { "B_MRAP_01_F", "call life_coplevel >= 2" },
-            { "B_MRAP_01_hmg_F", "call life_coplevel >= 3" }
+
+            { "SAPS_Transport_Van", "" },
+            { "SAPS_JEEP", "" },
+            { "SAPS_GOLF6", "" },
+            { "SAPS_WRC", "" },
+            { "SAPS_Touereg", "" },
+            { "SAPS_raptor", "" }, 
+            { "SAPS_raptor_unmarked", "" },
+            { "SAPS_Warrior", "" },
+            { "SAPS_M4", "" },
+            { "SAPS_GTR", "" },
+            { "SAPS_Interceptor", "" },
+            { "SAPS_Swat_Ifrit", "" }
         };
     };
 
@@ -197,211 +232,1197 @@ class LifeCfgVehicles {
         textures[] = {};
     };
 
+
+    //==================================================
+    //================== EMS ===========================
+    //==================================================
+
    class ESM_206 {
-        vItemSpace = 30;
+        vItemSpace = 25;
         conditions = "";
-        price = 7000;
+        price = 12000;
         textures[] = {};
     };
 
    class EMS_raptor {
-        vItemSpace = 30;
+        vItemSpace = 65;
         conditions = "";
-        price = 7000;
+        price = 25000;
         textures[] = {};
     };
 
    class ES_Ambulance {
-        vItemSpace = 30;
+        vItemSpace = 35;
         conditions = "";
-        price = 7000;
+        price = 3500;
         textures[] = {};
     };
 
+
+    //==================================================
+    //================== SAPS ==========================
+    //==================================================
+
     class SAPS_Transport_Van {
-        vItemSpace = 30;
+        vItemSpace = 45;
         conditions = "";
-        price = 7000;
-        textures[] = {};
+        price = 10000;
+        textures[] = {"call life_coplevel >= 1"};
     };
 
    class SAPS_JEEP {
         vItemSpace = 30;
         conditions = "";
-        price = 7000;
-        textures[] = {};
+        price = 15000;
+        textures[] = {"call life_coplevel >= 2"};
     };
 
    class SAPS_GOLF6 {
         vItemSpace = 30;
         conditions = "";
-        price = 7000;
-        textures[] = {};
+        price = 25000;
+        textures[] = {"call life_coplevel >= 2"};
     };
 
    class SAPS_WRC {
         vItemSpace = 30;
         conditions = "";
-        price = 7000;
-        textures[] = {};
+        price = 35000;
+        textures[] = {"call life_coplevel >= 2"};
     };
-
 
    class SAPS_raptor {
         vItemSpace = 30;
         conditions = "";
-        price = 7000;
-        textures[] = {};
+        price = 50000;
+        textures[] = {"call life_coplevel >= 3"};
     };
+
    class SAPS_raptor_unmarked {
         vItemSpace = 30;
         conditions = "";
-        price = 7000;
-        textures[] = {};
+        price = 75000;
+        textures[] = {"call life_coplevel >= 3"};
     };
+
    class SAPS_Warrior {
         vItemSpace = 30;
         conditions = "";
-        price = 7000;
-        textures[] = {};
+        price = 85000;
+        textures[] = {"call life_coplevel >= 3"};
     };
+
    class SAPS_Touereg {
         vItemSpace = 30;
         conditions = "";
         price = 7000;
-        textures[] = {};
+        textures[] = {"call life_coplevel >= 4"};
     };
+
    class SAPS_M4 {
         vItemSpace = 30;
         conditions = "";
-        price = 7000;
-        textures[] = {};
+        price = 100000;
+        textures[] = {"call life_coplevel >= 4"};
     };
+
    class SAPS_GTR {
         vItemSpace = 30;
         conditions = "";
-        price = 7000;
-        textures[] = {};
+        price = 150000;
+        textures[] = {"call life_coplevel >= 4"};
     };
 
    class SAPS_Swat_Ifrit {
         vItemSpace = 30;
         conditions = "";
-        price = 7000;
-        textures[] = {};
+        price = 275000;
+        textures[] = {"call life_coplevel >= 5"};
     };
 
    class SAPS_Interceptor {
         vItemSpace = 30;
         conditions = "";
-        price = 7000;
-        textures[] = {};
+        price = 350000;
+        textures[] = "call life_coplevel >= 5"
     };
+
+
+
+    //==================================================
+    //================== CIV ===========================
+    //==================================================
+
 
     class BMW_X6 {
-        vItemSpace = 30;
-        conditions = "";
-        price = 7000;
-        textures[] = {};
-    };
+        vItemSpace = 45;
+        conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
+        price = 350000;
+        textures[] = {
+
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    };  
 
     class Audio_RS3 {
-        vItemSpace = 30;
-        conditions = "";
-        price = 7000;
-        textures[] = {};
-    };
+        vItemSpace = 35;
+        conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
+        price = 35000;
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    };  
 
     class Yamaha_xmax {
         vItemSpace = 30;
-        conditions = "";
+        conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 7000;
-        textures[] = {};
-    };
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    };  
 
     class Golf_2 {
         vItemSpace = 30;
-        conditions = "";
-        price = 7000;
-        textures[] = {};
-    };
+        conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
+        price = 12500;
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    };  
 
     class Golf_1 {
-        vItemSpace = 30;
-        conditions = "";
-        price = 7000;
-        textures[] = {};
-    };
+        vItemSpace = 25;
+        conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
+        price = 10000;
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    };  
 
     class Golf_GTI_MK2 {
         vItemSpace = 30;
-        conditions = "";
-        price = 7000;
-        textures[] = {};
-    };
+        conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
+        price = 14000;
+        textures[] = {
+
+             { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    };  
 
     class Peugot_206 {
-        vItemSpace = 30;
-        conditions = "";
-        price = 7000;
-        textures[] = {};
-    };
+        vItemSpace = 35;
+        conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
+        price = 25000;
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    };  
 
     class Honda_civic {
-        vItemSpace = 30;
-        conditions = "";
-        price = 7000;
-        textures[] = {};
-    };
+        vItemSpace = 40;
+        conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
+        price = 35000;
+        textures[] = {
+
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    };  
 
     class Crown_vic {
-        vItemSpace = 30;
-        conditions = "";
-        price = 7000;
-        textures[] = {};
-    };
-
+        vItemSpace = 50;
+        conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
+        price = 21000;
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    };  
     class BMW_M3 {
         vItemSpace = 30;
-        conditions = "";
-        price = 7000;
-        textures[] = {};
-    };
+        conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
+        price = 34000;
+        textures[] = {
+
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    };  
 
     class Golf_R6 {
         vItemSpace = 30;
-        conditions = "";
-        price = 7000;
-        textures[] = {};
-    };
+        conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
+        price = 45000;
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    };  
 
     class Nissan_SilviaS15 {
         vItemSpace = 30;
-        conditions = "";
-        price = 7000;
-        textures[] = {};
-    };
+        conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
+        price = 50000;
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    };  
 
     class Seat_Cupra {
-        vItemSpace = 30;
-        conditions = "";
-        price = 7000;
-        textures[] = {};
-    };
+        vItemSpace = 35;
+        conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
+        price = 29000;
+        textures[] = {
+
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    };  
 
     class Mitsubishi_LancerEvo {
-        vItemSpace = 30;
-        conditions = "";
-        price = 7000;
-        textures[] = {};
-    };
+        vItemSpace = 40;
+        conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
+        price = 45000;
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    };  
 
     class VW_Toureg {
-        vItemSpace = 30;
-        conditions = "";
-        price = 7000;
-        textures[] = {};
-    };
+        vItemSpace = 40;
+        conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
+        price = 120000;
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    };  
+
+
+    //==================================================
+    //================== TRUCK =========================
+    //==================================================
+
+    class Ford_raptor {
+        vItemSpace = 95;
+        conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
+        price = 400000;
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    };  
+
+
+
+    class Warrior_civ {
+        vItemSpace = 115;
+        conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
+        price = 460000;
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    };  
+
+   class Ford_F100 {
+        vItemSpace = 135;
+        conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
+        price = 350000;
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    };  
+
+
+   class Chev_van {
+        vItemSpace = 160;
+        conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
+        price = 600000;
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    }; 
+
+
+
+   class GMC_Vandura {
+        vItemSpace = 180;
+        conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
+        price = 700000;
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    }; 
+
+
+   class Mercedes_sprinter {
+        vItemSpace = 200;
+        conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
+        price = 950000;
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    }; 
+
+
+
+   class Zilheis {
+        vItemSpace = 350;
+        conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
+        price = 3000000;
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    }; 
+
+
+   class Renault_Midlum {
+        vItemSpace = 475;
+        conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
+        price = 5000000;
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    }; 
+
+   class Iveco_Stalis {
+        vItemSpace = 550;
+        conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
+        price = 5800000;
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    }; 
+
+
+ class Mercedes_Actros {
+        vItemSpace = 650;
+        conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
+        price = 7000000;
+        textures[] = {
+           { "Red", "civ", {
+                "\Za_Life\Cars\Textures\Dark_red.paa"
+            } },
+            { "Yellow", "civ", {
+                "\Za_Life\Cars\Textures\Yellow.paa"
+            } },
+            { "White", "civ", {
+                "\Za_Life\Cars\Textures\White.paa"
+            } },
+            { "Blue", "civ", {
+                "\Za_Life\Cars\Textures\blue.paa"
+            } },
+            { "Light Blue", "civ", {
+                "\Za_Life\Cars\Textures\Light_Blue.paa"
+            } },
+            { "Turqoise", "civ", {
+                "\Za_Life\Cars\Textures\Turquoise.paa"
+            } },            
+            { "Grey", "civ", {
+                "\Za_Life\Cars\Textures\Grey.paa"
+            } },            
+            
+            { "Black", "civ", {
+                "\Za_Life\Cars\Textures\Black.paa"
+            } },
+            { "Purple", "civ", {
+                "\Za_Life\Cars\Textures\Purple.paa"
+            } },    
+            { "Oranje", "civ", {
+                "\Za_Life\Cars\Textures\Oranje.paa"
+            } },    
+            { "Green", "civ", {
+                "\Za_Life\Cars\Textures\green.paa"
+            } },            
+                };  
+    }; 
+
 
     // Apex DLC
     class C_Boat_Transport_02_F {
